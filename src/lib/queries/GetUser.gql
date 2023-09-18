@@ -1,0 +1,9 @@
+query GetUser ($email: String!) {
+  	Users( where: { email: { _eq: $email } } ) {
+        userName,
+        avatar,
+        firstName,
+        lastName,
+        email
+    }
+}

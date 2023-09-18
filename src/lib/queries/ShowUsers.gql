@@ -1,0 +1,6 @@
+query ShowUsers {
+	Users {
+		userName
+    	email
+	}
+}
