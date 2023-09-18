@@ -1,6 +1,4 @@
-import type { RequestHandlerArgs } from '$houdini';
-import { HoudiniClient } from '$houdini';
-
+import type { HoudiniClient, RequestHandlerArgs } from '$houdini';
 
 async function fetchQuery({ fetch, text = '', variables = {}, metadata, session }: RequestHandlerArgs) {
 	const url = 'https://kuzguni.hasura.app/v1/graphql';
@@ -9,9 +7,8 @@ async function fetchQuery({ fetch, text = '', variables = {}, metadata, session 
 		method: 'POST',
 		headers: {
 			'Content-Type': 'application/json',
-			// Authorization: `Bearer ${session?.user.token}`
-//			'x-hasura-role': 'cg'
 			'X-Hasura-Admin-Secret': 'I07gjUBDgxH1GKjCLIu7umFv88jowuBECM4liYJB3B3URGAOtBOaI38r6fqF2eLe',
+			'X-Hasura-Role': 'cg'
 		},
 		body: JSON.stringify({
 			query: text,
@@ -30,9 +27,9 @@ export default new HoudiniClient({
             headers: {
 				'Content-Type': 'application/json',
 				'X-Hasura-Admin-Secret': 'I07gjUBDgxH1GKjCLIu7umFv88jowuBECM4liYJB3B3URGAOtBOaI38r6fqF2eLe',
-//				'x-hasura-role': 'cg'
+				'X-Hasura-Role': 'cg'
             },
         }
     },
 });
--/
+*/
