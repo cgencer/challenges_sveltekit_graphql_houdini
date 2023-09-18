@@ -1,7 +1,7 @@
 import type { RequestHandlerArgs } from '$houdini';
 import { HoudiniClient } from '$houdini';
 
-/*
+
 async function fetchQuery({ fetch, text = '', variables = {}, metadata, session }: RequestHandlerArgs) {
 	const url = 'https://kuzguni.hasura.app/v1/graphql';
 
@@ -10,8 +10,8 @@ async function fetchQuery({ fetch, text = '', variables = {}, metadata, session 
 		headers: {
 			'Content-Type': 'application/json',
 			// Authorization: `Bearer ${session?.user.token}`
-			'x-hasura-role': 'cg'
-//			'X-Hasura-Admin-Secret': dynPubEnv.PUBLIC_CONFY_API_TOKEN
+//			'x-hasura-role': 'cg'
+			'X-Hasura-Admin-Secret': 'I07gjUBDgxH1GKjCLIu7umFv88jowuBECM4liYJB3B3URGAOtBOaI38r6fqF2eLe',
 		},
 		body: JSON.stringify({
 			query: text,
@@ -21,8 +21,8 @@ async function fetchQuery({ fetch, text = '', variables = {}, metadata, session 
 	return await result.json();
 };
 export default new HoudiniClient(fetchQuery);
-*/
 
+/*
 export default new HoudiniClient({
     url: 'https://kuzguni.hasura.app/v1/graphql',
     fetchParams({ session }) {
@@ -35,3 +35,4 @@ export default new HoudiniClient({
         }
     },
 });
+-/

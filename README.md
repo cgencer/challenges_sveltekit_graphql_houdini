@@ -3,6 +3,7 @@
 - Experimented some methods to use esbuild on a MacBookPro-mid2010 machine and found out **pnpm** with a **wasm-based esbuild** works well enough
 - Needed to use enforce package.json into **nodeV-16** and **npmpV-8**
 - Imported my icebreaker repo as a submodule, to test and export the data with  postgres-based RestAPI.
+- Conjured a Vagrantfile from abyss, initialising with a shared folder pointing to my server/ folder to run it from within Vagrant.
 - Created a Hasura Cloud & Neon Console accounts. 
 - Imported content for 3 tables from my **icebreaker** repo: users, contents and crossbindings.
 - Started SvelteKit initial structure, imported some packages manually; FontAwesome, Tailwind, Flowbite for design-related needs
